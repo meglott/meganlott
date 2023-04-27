@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors: {
         'light-gray': '#D9D9D9',
-        'title-text': '#ECF5F5'
+        'light-green': '#ECF5F5',
+        'light-purple': '#F0F0F6',
       },
       backgroundImage: {
         'splash-screen': "url('../public/splash-screen.png')",

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function HeaderComponent() {    
     return (  
-        <nav className="w-full h-28 bg-white border-b border-light-gray">
+        <nav className="w-full h-28 bg-white border-b border-light-gray sticky top-0">
             <div className="flex w-full h-full py-5 px-10 justify-between items-center">
                 <div className="flex items-center pl-10 gap-5">
                     <UserCircleIcon className="h-14 w-14" />
