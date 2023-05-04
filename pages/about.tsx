@@ -2,7 +2,8 @@ export default function About() {
 	return (
 		<div 
             role="about-page"
-            className="flex w-full h-full bg-light-green items-center place-content-center"
+            id="about"
+            className="flex-1 w-full h-full bg-light-green items-center place-content-center"
         >
             <div 
                 role="content" 

@@ -5,7 +5,7 @@ import Projects from "./projects";
 
 export default function HomePage() {
 	return (
-		<div className="h-full w-full">
+		<div className="h-screen w-full">
 			<Home />
 			<About />
 			<Projects />
