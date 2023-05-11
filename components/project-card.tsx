@@ -8,7 +8,7 @@ function ProjectCard() {
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">meganlott.com</div>
                 <p className="text-gray-700 text-base">
-                You're looking at it! This portfolio site was designed and built by yours truly.
+                This is it! This portfolio site was designed and built by yours truly.
                 </p>
             </div>
             <div className="px-6 pt-4 pb-2">
