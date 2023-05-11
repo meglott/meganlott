@@ -20,6 +20,7 @@ module.exports = {
       backgroundImage: {
         'splash-screen': "url('../public/splash-screen.png')",
         'heading': "url('../public/heading.png')",
+        'about-background': "url('../public/about-background.png')",
       },
       fontSize: {
         title: ['96px', {lineHeight: '96px', fontWeight: '400'}],

@@ -13,12 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <header className='w-full fixed top-0'>
-        <HeaderComponent />
-      </header>
-      <main>
-        <body className='container'>{children}</body>
-      </main>
+      <div className='flex flex-col h-screen'>
+        <header className='sticky top-0 w-full'>
+          <HeaderComponent />
+        </header>
+        <main className='flex-1 overflow-y-scroll'>
+          <body>{children}</body>
+        </main>
+      </div>
     </html>
   )
 }

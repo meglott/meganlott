@@ -4,8 +4,7 @@ import HeaderComponent from '@/../components/layout/header';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="flex h-screen flex-col">
-      <HeaderComponent />
+    <div>
       <Component {...pageProps} />
     </div>
   );
