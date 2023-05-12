@@ -13,7 +13,7 @@ export default function HomePage() {
 			</div>
 			<div className="flex-1 overflow-y-scroll">
 				<Home />
-				<About />
+				{/* <About /> */}
 				<Projects />
 				<Contact />
 				<FooterComponent />

@@ -8,7 +8,7 @@ function HeaderComponent() {
             <div className="flex w-full h-full py-5 px-10 justify-between items-center">
                 <div className="flex items-center pl-10 gap-5">
                     <Image
-                        src="/../public/headshot.png"
+                        src={"/headshot.png"}
                         height={60}
                         width={60}
                         alt="Headshot of Megan Lott"
