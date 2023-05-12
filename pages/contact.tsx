@@ -2,18 +2,57 @@ import { useState } from "react";
 
 export default function Contact() {
 
+	// States for the form fields
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
 	const [phonenumber, setPhonenumber] = useState("");
 	const [message, setMessage] = useState("");
 
+	// Form validation state
+	const [errors, setErrors] = useState({});
+
+	const formValidation = () => {
+		let formErrors: { [field: string]: boolean} = {};
+		let isValid = true;
+
+		if (firstName.length <= 0) {
+			formErrors["firstname"] = true;
+			isValid = false;
+		} 
+
+		if (lastName.length <= 0) {
+			formErrors["lastname"] = true;
+			isValid = false;
+		}
+
+		// TODO: other email validations
+		if (email.length <= 0) {
+			formErrors["email"] = true;
+			isValid = false;
+		}
+
+		// TODO: phone number validations
+		if (phonenumber.length <= 0) {
+			formErrors["phonenumber"] = true;
+			isValid = false;
+		}
+
+		if (message.length <= 0) {
+			formErrors["message"] = true;
+			isValid = false;
+		}
+
+		setErrors(formErrors);
+		return isValid;
+	}
+
 	const handleSubmit = async (e: React.SyntheticEvent) => {
 		e.preventDefault();
 	
-		// let isValidForm = handleValidation();
+		let isValidForm = await formValidation();
 	
-		 
+		if (isValidForm) {
 		  const res = await fetch("/api/sendgrid", {
 			body: JSON.stringify({
 			  email: email,
@@ -33,6 +72,10 @@ export default function Contact() {
 			console.log(error);
 			return;
 		  }
+		} else {
+			// TODO: handle invalid form
+			console.log(errors);
+		}
 	  };
 
 	return (

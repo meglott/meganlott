@@ -14,8 +14,8 @@ export default function Projects() {
 			<div className="flex flex-col flex-1 justify-center">
 				<div role="cards" className="h-max-full w-full grid grid-rows-1 grid-flow-col gap-0 pt-4 justify-items-center">
 					<div role="left-arrow" className="flex items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
+							<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
 						</svg>
 					</div>
 					<ProjectCard 
@@ -52,8 +52,8 @@ export default function Projects() {
 						]}
 					/> */}
 					<div role="right-arrow" className="flex items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
+							<path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 						</svg>
 					</div>
 				</div>
