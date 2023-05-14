@@ -1,4 +1,6 @@
 import { ChangeEvent, useState } from "react";
+import SuccessAlert from "../components/success-alert";
+import ErrorAlert from "../components/error-alert";
 
 export default function Contact() {
 
@@ -119,11 +121,11 @@ export default function Contact() {
 	
 		  const { error } = await res.json();
 		  if (error) {
+			// TODO: Show error message when email didn't send correctly.
 			console.log(error);
 			return;
 		  }
 		} else {
-			// TODO: invalid form
 			return;
 		}
 
