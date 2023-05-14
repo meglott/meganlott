@@ -26,6 +26,29 @@ export default function Contact() {
 		}
 	}
 
+	const createErrorMessage = (field: string, message: string) => {
+		let span = document.createElement("span");
+		span.id = "error-span-" + field;
+		span.textContent = message;
+		span.style.color = "red";
+		span.style.fontSize = "12px";
+		return span;
+	}
+
+	const clearErrorMessage = (field: string) => {
+		const emailDiv = document.querySelector(`#${field}-div`);
+		const errorSpan = document.getElementById(`error-span-${field}`);
+		if (errorSpan == null) 
+			return;
+		emailDiv?.removeChild(errorSpan);
+	}
+
+	const validateEmail = (email: string | null) => {
+		return email?.match(
+		  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+		);
+	  };
+
 	const formValidation = () => {
 		let formErrors: { [field: string]: boolean} = {};
 		let isValid = true;
@@ -42,11 +65,15 @@ export default function Contact() {
 			isValid = false;
 		}
 
-		// TODO: other email validations
 		if (email.length <= 0) {
 			formErrors["email"] = true;
 			showError(document.querySelector("#email"));
 			isValid = false;
+		} else if (!validateEmail(email)) {
+			showError(document.querySelector("#email"));
+			let emailDiv = document.querySelector("#email-div");
+			// TODO: check if error message is already present
+			emailDiv?.appendChild(createErrorMessage("email", "Email is not valid."));
 		}
 
 		// TODO: phone number validations
@@ -93,6 +120,7 @@ export default function Contact() {
 		  }
 		} else {
 			// TODO: invalid form
+			return;
 		}
 
 		(e.target as HTMLFormElement).reset();
@@ -140,7 +168,9 @@ export default function Contact() {
 							/>
 						</div>
 					</div>
-					<div className="sm:col-span-2">
+					<div 
+						id="email-div"
+						className="sm:col-span-2">
 						<label className="block text-label mt-1">EMAIL</label>
 						<input 
 							type="text" 
@@ -148,7 +178,16 @@ export default function Contact() {
 							id="email" 
 							autoComplete="email"
 							onChange={(e) => {
-								clearError(e);
+								let emailDiv = document.querySelector("#email-div");
+								let errorSpan = document.getElementById("error-span-email");
+								if (!emailDiv?.contains(errorSpan)) {
+									clearError(e);
+								} else {
+									if (validateEmail(e.target.value)) {
+										clearError(e);
+										clearErrorMessage("email");
+									}
+								}
 								setEmail(e.target.value);
 							  }} 
 							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
