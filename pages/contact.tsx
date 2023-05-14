@@ -9,9 +9,6 @@ export default function Contact() {
 	const [phonenumber, setPhonenumber] = useState("");
 	const [message, setMessage] = useState("");
 
-	// Form validation state
-	const [errors, setErrors] = useState({});
-
 	const showError = (e: Element | null) => {
 		e?.classList.replace("focus:outline-button", "focus:outline-none");
 		e?.classList.add("border-2");
@@ -49,54 +46,61 @@ export default function Contact() {
 		);
 	  };
 
+	const validatePhoneNumber = (phonenumber: string | null) => {
+		return phonenumber?.match(
+			/^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+		);
+	};
+
 	const formValidation = () => {
-		let formErrors: { [field: string]: boolean} = {};
 		let isValid = true;
 
 		if (firstName.length <= 0) {
-			formErrors["firstname"] = true;
 			showError(document.querySelector("#first-name"));
 			isValid = false;
 		} 
 
 		if (lastName.length <= 0) {
-			formErrors["lastname"] = true;
 			showError(document.querySelector("#last-name"));
 			isValid = false;
 		}
 
 		if (email.length <= 0) {
-			formErrors["email"] = true;
 			showError(document.querySelector("#email"));
 			isValid = false;
 		} else if (!validateEmail(email)) {
+			isValid = false;
 			showError(document.querySelector("#email"));
 			let emailDiv = document.querySelector("#email-div");
-			// TODO: check if error message is already present
-			emailDiv?.appendChild(createErrorMessage("email", "Email is not valid."));
+			if (!emailDiv?.contains(document.getElementById("error-span-email"))) {
+				emailDiv?.appendChild(createErrorMessage("email", "Email is not valid."));
+			}
 		}
 
-		// TODO: phone number validations
 		if (phonenumber.length <= 0) {
-			formErrors["phonenumber"] = true;
 			showError(document.querySelector("#phone-number"));
 			isValid = false;
+		} else if (!validatePhoneNumber(phonenumber)) {
+			isValid = false;
+			showError(document.querySelector("#phone-number"));
+			let phoneNumberDiv = document.querySelector("#phone-number-div");
+			if (!phoneNumberDiv?.contains(document.getElementById("error-span-phone-number"))) {
+				phoneNumberDiv?.appendChild(createErrorMessage("phone-number", "Phone number is not valid."));
+			}
 		}
 
 		if (message.length <= 0) {
-			formErrors["message"] = true;
 			showError(document.querySelector("#message"));
 			isValid = false;
 		}
 
-		setErrors(formErrors);
 		return isValid;
 	}
 
 	const handleSubmit = async (e: React.SyntheticEvent) => {
 		e.preventDefault();
 	
-		let isValidForm = await formValidation();
+		let isValidForm = formValidation();
 	
 		if (isValidForm) {
 		  const res = await fetch("/api/sendgrid", {
@@ -193,7 +197,9 @@ export default function Contact() {
 							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
 						/>
 					</div>
-					<div className="sm:col-span-2">
+					<div 
+						id="phone-number-div"
+						className="sm:col-span-2">
 						<label className="block text-label mt-1">PHONE NUMBER</label>
 						<input 
 							type="tel" 
@@ -201,7 +207,17 @@ export default function Contact() {
 							id="phone-number" 
 							autoComplete="tel"
 							onChange={(e) => {
-								clearError(e);
+								let phoneNumberDiv = document.querySelector("#phone-number-div");
+								let errorSpan = document.getElementById("error-span-phone-number");
+								if (!phoneNumberDiv?.contains(errorSpan)) {
+									clearError(e);
+								} else {
+									if (validatePhoneNumber(e.target.value)) {
+										clearError(e);
+										clearErrorMessage("phone-number");
+									}
+
+								}
 								setPhonenumber(e.target.value);
 							  }} 
 							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
