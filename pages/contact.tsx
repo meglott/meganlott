@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
-import SuccessAlert from "../components/success-alert";
-import ErrorAlert from "../components/error-alert";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
 
@@ -99,6 +99,18 @@ export default function Contact() {
 		return isValid;
 	}
 
+	const showSuccessToastMessage = () => {
+        toast.success('Email successfully sent!', {
+            position: toast.POSITION.BOTTOM_CENTER
+        });
+    };
+
+	const showErrorToastMessage = () => {
+        toast.error('Something went wrong. Please try again later.', {
+            position: toast.POSITION.BOTTOM_CENTER
+        });
+    };
+
 	const handleSubmit = async (e: React.SyntheticEvent) => {
 		e.preventDefault();
 	
@@ -121,8 +133,7 @@ export default function Contact() {
 	
 		  const { error } = await res.json();
 		  if (error) {
-			// TODO: Show error message when email didn't send correctly.
-			console.log(error);
+			showErrorToastMessage();
 			return;
 		  }
 		} else {
@@ -130,7 +141,7 @@ export default function Contact() {
 		}
 
 		(e.target as HTMLFormElement).reset();
-		// TODO: handle form send successfully
+		showSuccessToastMessage();
 	  };
 
 	return (
@@ -138,7 +149,10 @@ export default function Contact() {
 		role="contact-page"
 		id="contact-page"
 		className="flex-1 w-full h-full bg-light-purple bg-splash-screen bg-no-repeat bg-center bg-contain">
-            <div className="flex flex-col w-full h-full items-center justify-center">
+            <div
+				id="contact-content" 
+				className="flex flex-col w-full h-full items-center justify-center"
+			>
                 <p className="text-heading text-light-green text-stroke">CONTACT ME</p>
 				<form 
 				id="contact-form"
@@ -244,6 +258,7 @@ export default function Contact() {
 							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-button border border-gray">
 							SEND
 						</button>
+						<ToastContainer />
 					</div>
 				</form>
             </div>

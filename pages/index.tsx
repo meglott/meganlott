@@ -7,15 +7,26 @@ import Projects from "./projects";
 
 export default function HomePage() {
 	return (
-		<div className="flex flex-col h-screen">
+		<div 
+			id="outermost-div"
+			className="flex flex-col h-screen"
+		>
 			<div className="h-24 sticky top-0 w-full">
 				<HeaderComponent />
 			</div>
-			<div className="flex-1 overflow-y-scroll">
+			<div 
+				id="main-div"
+				className="flex-1 overflow-y-hidden"
+			>
 				<Home />
 				{/* <About /> */}
 				<Projects />
 				<Contact />
+			</div>
+			<div 
+				id="footer-div"
+				className="sticky bottom-0 w-full"
+			>
 				<FooterComponent />
 			</div>
 		</div>

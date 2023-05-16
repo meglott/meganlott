@@ -6,7 +6,7 @@ import githubMark from "../../public/github-mark.svg";
 
 function FooterComponent() {    
     return (  
-        <nav className="sticky h-24 top-0 left-0 w-full bg-white border-t border-light-gray">
+        <nav className="sticky h-18 top-0 left-0 w-full bg-white border-t border-light-gray">
             <div className="flex w-full h-full py-5 px-10 justify-between items-center">
                 <div className="flex items-center pl-10 gap-5">
                     <p className="text-sm font-roboto font-normal">© 2023 Megan Lott LLC</p>

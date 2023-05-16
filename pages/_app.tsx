@@ -4,7 +4,7 @@ import HeaderComponent from '@/../components/layout/header';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <div id='app'>
       <Component {...pageProps} />
     </div>
   );
