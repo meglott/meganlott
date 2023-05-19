@@ -12,7 +12,7 @@ function FooterComponent() {
                     <p className="text-sm font-roboto font-normal">© 2023 Megan Lott LLC</p>
                 </div>
                 <div className="flex justify-end items-center pr-10 gap-10">
-                    <Link href="https://www.linkedin.com/in/megan-lott-35322284/">
+                    <Link href="https://www.linkedin.com/in/megan-lott-35322284/" rel="noopener noreferrer" target="_blank">
                         <Image 
                             priority
                             src={linkedInMark}
@@ -21,7 +21,7 @@ function FooterComponent() {
                             alt="LinkedIn Logo"
                         />
                     </Link>
-                    <Link href="https://github.com/meglott">
+                    <Link href="https://github.com/meglott" rel="noopener noreferrer" target="_blank">
                     <Image 
                             priority
                             src={githubMark}
