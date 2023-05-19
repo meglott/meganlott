@@ -17,11 +17,27 @@ function HeaderComponent() {
                         <p className="uppercase text-xl font-roboto font-normal">Megan Lott</p>
                     </div>
                 </Link>
-                <div className="flex justify-end items-center pr-10 gap-10">
-                    <Link href="#home" className="uppercase text-xl font-roboto font-normal">Home</Link>
-                    <Link href="#about" className="uppercase text-xl font-roboto font-normal">About</Link>
-                    <Link href="#projects" className="uppercase text-xl font-roboto font-normal">Projects</Link>
-                    <Link href="#contact-page" className="uppercase text-xl font-roboto font-normal">Contact</Link>
+                <div className="flex flex-row justify-end items-center pr-10 gap-10">
+                    <Link href="#home" className="uppercase text-xl font-roboto font-normal">
+                        <div className='flex items-center h-12 hover:border-b-4 hover:border-button hover:mb-[-4px]'>
+                            Home
+                        </div>
+                    </Link>
+                    <Link href="#about" className="uppercase text-xl font-roboto font-normal">
+                        <div className='flex items-center h-12 hover:border-b-4 hover:border-button hover:mb-[-4px]'>
+                            About
+                        </div>
+                    </Link>
+                    <Link href="#projects" className="uppercase text-xl font-roboto font-normal">
+                        <div className='flex items-center h-12 hover:border-b-4 hover:border-button hover:mb-[-4px]'>
+                            Projects
+                        </div>
+                    </Link>
+                    <Link href="#contact-page" className="uppercase text-xl font-roboto font-normal">
+                        <div className='flex items-center h-12 hover:border-b-4 hover:border-button hover:mb-[-4px]'>
+                            Contact
+                        </div>
+                    </Link>
                 </div>
             </div>
         </nav>    
