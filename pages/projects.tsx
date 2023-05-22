@@ -6,7 +6,7 @@ export default function Projects() {
 		<div 
 		role="projects-page"
         id="projects"
-		className="w-full h-full bg-white flex flex-col"
+		className="w-full h-full flex flex-col"
         >
 			<div role="header" className="h-40 pt-14 bg-heading bg-no-repeat bg-center bg-contain text-center">
 				<p className="text-heading text-white text-stroke">PROJECTS</p>
