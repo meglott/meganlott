@@ -24,7 +24,11 @@ module.exports = {
       },
       fontSize: {
         title: ['96px', {lineHeight: '96px', fontWeight: '400'}],
+        smTitle: ['36px', {lineHeight: '56px', fontWeight: '400'}],
+        mdTitle: ['64px', {lineHeight: '80px', fontWeight: '400'}],
         subtitle: ['32px', {lineHeight: '56px', fontWeight:'400'}],
+        smSubtitle: ['24px', {lineHeight: '56px', fontWeight: '400'}],
+        mdSubtitle: ['26px', {lineHeight: '42px', fontWeight: '400'}],
         heading: ['64px', {lineHeight: '56px', fontWeight: '400'}],
         label: ['20px', {lineHeight: '32px', fontWeight: '400'}],
       }
