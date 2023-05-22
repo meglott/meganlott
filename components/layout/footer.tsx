@@ -1,4 +1,3 @@
-import { UserCircleIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import linkedInMark from "../../public/linkedin-mark.svg";
@@ -35,4 +34,4 @@ function FooterComponent() {
         </nav>    
     )
 }
-export default FooterComponent
+export default FooterComponent;

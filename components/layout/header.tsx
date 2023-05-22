@@ -3,6 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function HeaderComponent() {    
+        const showNav = () => {
+        let menu = document.getElementById("mobile-menu");
+        menu?.classList.toggle('-translate-x-full');
+    }
+
     return (  
         <nav className="sticky h-24 top-0 left-0 w-full bg-white border-b border-light-gray">
             <div className="flex w-full h-full py-5 px-5 md:px-10 justify-between items-center">
@@ -55,8 +60,16 @@ function HeaderComponent() {
                         </div>
                     </Link>
                 </div>
-                <div className="visible h-9 w-9 pr-10 gap-10 lg:hidden">
-                    <Bars3Icon fill='black' height={36} width={36} />
+                {/* Hamburger button */}
+                <div className='visible lg:hidden'>
+                    <button 
+                        type="button" 
+                        onClick={showNav}
+                    >
+                        <div className="h-9 w-9 pr-10 gap-10">
+                                <Bars3Icon fill='black' height={36} width={36} />
+                        </div>
+                    </button>
                 </div>
             </div>
         </nav>    
