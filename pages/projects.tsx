@@ -21,14 +21,17 @@ export default function Projects() {
 					<ProjectCard 
 						imageSrc="/homepage.png"
 						imageAlt="Homepage of meganlott.com" 
-						title="meganlott.com" 
+						title="Megan Lott LLC" 
+						subtitle="Design, Develop, and Deploy"
 						description="This is it! This portfolio site was designed and built by yours truly."
 						attributes={[
 							"TypeScript", 
 							"React",
 							"Next.js", 
 							"Tailwind CSS",
-							"AWS Lightsail"
+							"AWS Amplify",
+							"Route 53",
+							"SendGrid"
 						]}
 					/>
 					{/* <ProjectCard 

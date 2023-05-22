@@ -4,16 +4,20 @@ type ProjectCardProps = {
     imageSrc: string,
     imageAlt: string,
     title: string,
+    subtitle: string,
     description: string,
     attributes: Array<string>
 }
 
-function ProjectCard({imageSrc, imageAlt, title, description, attributes}: ProjectCardProps) {    
+function ProjectCard({imageSrc, imageAlt, title, subtitle, description, attributes}: ProjectCardProps) {    
     return (  
         <div role="project-card" className="max-w-sm w-full rounded-xl overflow-hidden shadow-lg">
             <Image height={250} width={500} src={imageSrc} alt={imageAlt} />
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{title}</div>
+                <div className="font-bold text-xl mb-2">
+                    {title}
+                    <p className="text-gray-500 text-sm font-normal italic">{subtitle}</p>
+                </div>
                 <p className="text-gray-700 text-base">
                     {description}
                 </p>
