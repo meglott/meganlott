@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 function HeaderComponent() {    
         const showNav = () => {
-        let menu = document.getElementById("mobile-menu");
-        menu?.classList.toggle('-translate-x-full');
-    }
+            let menu = document.getElementById("mobile-menu");
+            menu?.classList.toggle('-translate-x-full');
+        }
 
     return (  
         <nav className="sticky h-24 top-0 left-0 w-full bg-white border-b border-light-gray">

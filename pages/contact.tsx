@@ -148,19 +148,19 @@ export default function Contact() {
 		<div 
 		role="contact-page"
 		id="contact-page"
-		className="flex-1 w-full h-full bg-light-purple bg-splash-screen bg-no-repeat bg-center bg-contain">
+		className="flex-1 w-full h-full bg-light-purple md:bg-splash-screen md:bg-no-repeat md:bg-center md:bg-contain">
             <div
 				id="contact-content" 
 				className="flex flex-col w-full h-full items-center justify-center"
 			>
-                <p className="text-heading text-light-green text-stroke">CONTACT ME</p>
+                <p className="text-smTitle md:text-mdTitle lg:text-heading text-stroke">CONTACT ME</p>
 				<form 
 				id="contact-form"
 				onSubmit={handleSubmit}
-				className="w-5/12 mx-auto mt-10">
-					<div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+				className="w-7/12 lg:w-5/12 mx-auto mt-5 lg:mt-10">
+					<div className="grid grid-cols-1 gap-x-8 gap-y-2 lg:gap-y-6">
 						<div>
-							<label className="block text-label">FIRST NAME</label>
+							<label className="block lg:text-label-lg">FIRST NAME</label>
 							<input 
 								type="text" 
 								name="first-name" 
@@ -174,7 +174,7 @@ export default function Contact() {
 							/>
 						</div>
 						<div>
-							<label className="block text-label">LAST NAME</label>
+							<label className="block lg:text-label-lg">LAST NAME</label>
 							<input 
 								type="text" 
 								name="last-name" 
@@ -191,7 +191,7 @@ export default function Contact() {
 					<div 
 						id="email-div"
 						className="sm:col-span-2">
-						<label className="block text-label mt-1">EMAIL</label>
+						<label className="block lg:text-label-lg mt-1">EMAIL</label>
 						<input 
 							type="text" 
 							name="email" 
@@ -216,7 +216,7 @@ export default function Contact() {
 					<div 
 						id="phone-number-div"
 						className="sm:col-span-2">
-						<label className="block text-label mt-1">PHONE NUMBER</label>
+						<label className="block lg:text-label-lg mt-1">PHONE NUMBER</label>
 						<input 
 							type="tel" 
 							name="phone-number" 
@@ -240,7 +240,7 @@ export default function Contact() {
 						/>
 					</div>
 					<div className="sm:col-span-2">
-						<label className="block text-label mt-1">MESSAGE</label>
+						<label className="block lg:text-label-lg mt-1">MESSAGE</label>
 						<textarea 
 							name="message" 
 							id="message" 
