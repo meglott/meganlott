@@ -153,7 +153,12 @@ export default function Contact() {
 				id="contact-content" 
 				className="flex flex-col w-full h-full items-center justify-center"
 			>
-                <p className="text-title-sm md:text-title-md lg:text-heading text-stroke">CONTACT ME</p>
+				<div role="header" className="h-24 md:hidden w-full bg-heading bg-no-repeat bg-center bg-cover flex justify-center items-center">
+					<p className="text-title-sm md:title-md text-white text-stroke-subtitle">CONTACT ME</p>
+				</div>
+				<div>
+                	<p className="hidden md:flex text-title-sm md:text-title-md lg:text-heading text-white text-stroke-subtitle">CONTACT ME</p>
+				</div>
 				<form 
 				id="contact-form"
 				onSubmit={handleSubmit}
@@ -257,7 +262,7 @@ export default function Contact() {
 					<div className="mt-8">
 						<button 
 							type="submit" 
-							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-purple-900 border font-semibold">
+							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-purple-900 font-semibold">
 							SEND
 						</button>
 						<ToastContainer />
