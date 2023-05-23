@@ -171,7 +171,7 @@ export default function Contact() {
 										clearError(e);
 										setFirstName(e.target.value);
 									}} 
-									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 								/>
 							</div>
 							<div className="w-full">
@@ -185,7 +185,7 @@ export default function Contact() {
 										clearError(e);
 										setLastName(e.target.value);
 									}}
-									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 								/>
 							</div>
 						</div>
@@ -212,7 +212,7 @@ export default function Contact() {
 								}
 								setEmail(e.target.value);
 							  }} 
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div 
@@ -238,7 +238,7 @@ export default function Contact() {
 								}
 								setPhonenumber(e.target.value);
 							  }} 
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div className="sm:col-span-2">
@@ -251,13 +251,13 @@ export default function Contact() {
 								clearError(e);
 								setMessage(e.target.value);
 							  }}
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div className="mt-8">
 						<button 
 							type="submit" 
-							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-button border border-gray">
+							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-purple-900 border font-semibold">
 							SEND
 						</button>
 						<ToastContainer />

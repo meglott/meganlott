@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProjectCard from "../components/project-card";
+import Link from "next/link";
 
 export default function Projects() {
 	return (
@@ -60,6 +61,9 @@ export default function Projects() {
 						</svg>
 					</div>
 				</div>
+			</div>
+			<div className="text-slate-800 mb-4">
+				<p>Like what you see? <Link href="#contact-page" className="font-bold text-purple-900">Contact me</Link>.</p>
 			</div>
 		</div>
 	);
