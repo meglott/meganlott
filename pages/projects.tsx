@@ -7,12 +7,12 @@ export default function Projects() {
 		<div 
 		role="projects-page"
         id="projects"
-		className="w-full h-full flex flex-col justify-center items-center"
+		className="w-full h-full flex flex-col justify-between items-center py-4 lg:py-2"
         >
-			<div role="header" className="h-24 lg:h-40 w-full bg-heading bg-no-repeat bg-center bg-contain flex justify-center items-center">
-				<p className="text-title-sm md:title-md lg:text-heading text-white text-stroke">PROJECTS</p>
+			<div role="header" className="h-24 md:h-40 xl:h-48 w-full bg-heading bg-no-repeat bg-center bg-cover lg:bg-cover flex justify-center items-center">
+				<p className="text-title-sm md:text-heading text-white text-stroke-subtitle">PROJECTS</p>
 			</div>
-			<div className="flex flex-col flex-1 h-fit justify-center">
+			<div className="flex flex-col h-fit justify-center">
 				<div role="cards" className="flex flex-row h-max-full w-full gap-0 lg:gap-8 pt-0 lg:pt-4 justify-items-center">
 					<div role="left-arrow" className="flex items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
@@ -62,7 +62,7 @@ export default function Projects() {
 					</div>
 				</div>
 			</div>
-			<div className="text-slate-800 mb-4">
+			<div className="text-slate-800">
 				<p>Like what you see? <Link href="#contact-page" className="font-bold text-purple-900">Contact me</Link>.</p>
 			</div>
 		</div>
