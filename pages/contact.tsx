@@ -153,39 +153,46 @@ export default function Contact() {
 				id="contact-content" 
 				className="flex flex-col w-full h-full items-center justify-center"
 			>
-                <p className="text-smTitle md:text-mdTitle lg:text-heading text-stroke">CONTACT ME</p>
+				<div role="header" className="h-24 md:hidden w-full bg-heading bg-no-repeat bg-center bg-cover flex justify-center items-center">
+					<p className="text-title-sm md:title-md text-white text-stroke-subtitle">CONTACT ME</p>
+				</div>
+				<div>
+                	<p className="hidden md:flex text-title-sm md:text-title-md lg:text-heading text-white text-stroke-subtitle">CONTACT ME</p>
+				</div>
 				<form 
 				id="contact-form"
 				onSubmit={handleSubmit}
 				className="w-7/12 lg:w-5/12 mx-auto mt-5 lg:mt-10">
 					<div className="grid grid-cols-1 gap-x-8 gap-y-2 lg:gap-y-6">
-						<div>
-							<label className="block lg:text-label-lg">FIRST NAME</label>
-							<input 
-								type="text" 
-								name="first-name" 
-								id="first-name" 
-								autoComplete="given-name"
-								onChange={(e) => {
-									clearError(e);
-									setFirstName(e.target.value);
-								  }} 
-								className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
-							/>
-						</div>
-						<div>
-							<label className="block lg:text-label-lg">LAST NAME</label>
-							<input 
-								type="text" 
-								name="last-name" 
-								id="last-name" 
-								autoComplete="family-name" 
-								onChange={(e) => {
-									clearError(e);
-									setLastName(e.target.value);
-								  }}
-								className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
-							/>
+						<div role="name" className="flex flex-col md:flex-row md:gap-4 justify-between">
+							<div className="w-full">
+								<label className="block lg:text-label-lg">FIRST NAME</label>
+								<input 
+									type="text" 
+									name="first-name" 
+									id="first-name" 
+									autoComplete="given-name"  
+									onChange={(e) => {
+										clearError(e);
+										setFirstName(e.target.value);
+									}} 
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
+								/>
+							</div>
+							<div className="w-full">
+								<label className="block lg:text-label-lg">LAST NAME</label>
+								<input 
+									type="text" 
+									name="last-name" 
+									id="last-name" 
+									autoComplete="family-name" 
+									onChange={(e) => {
+										clearError(e);
+										setLastName(e.target.value);
+									}}
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
+								/>
+							</div>
 						</div>
 					</div>
 					<div 
@@ -210,7 +217,7 @@ export default function Contact() {
 								}
 								setEmail(e.target.value);
 							  }} 
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div 
@@ -236,7 +243,7 @@ export default function Contact() {
 								}
 								setPhonenumber(e.target.value);
 							  }} 
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div className="sm:col-span-2">
@@ -249,13 +256,13 @@ export default function Contact() {
 								clearError(e);
 								setMessage(e.target.value);
 							  }}
-							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+							className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-purple-900"
 						/>
 					</div>
 					<div className="mt-8">
 						<button 
 							type="submit" 
-							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-button border border-gray">
+							className="block h-10 w-full rounded-md px-3.5 py-1.5 text-white bg-purple-900 font-semibold">
 							SEND
 						</button>
 						<ToastContainer />
