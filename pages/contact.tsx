@@ -153,39 +153,41 @@ export default function Contact() {
 				id="contact-content" 
 				className="flex flex-col w-full h-full items-center justify-center"
 			>
-                <p className="text-smTitle md:text-mdTitle lg:text-heading text-stroke">CONTACT ME</p>
+                <p className="text-title-sm md:text-title-md lg:text-heading text-stroke">CONTACT ME</p>
 				<form 
 				id="contact-form"
 				onSubmit={handleSubmit}
 				className="w-7/12 lg:w-5/12 mx-auto mt-5 lg:mt-10">
 					<div className="grid grid-cols-1 gap-x-8 gap-y-2 lg:gap-y-6">
-						<div>
-							<label className="block lg:text-label-lg">FIRST NAME</label>
-							<input 
-								type="text" 
-								name="first-name" 
-								id="first-name" 
-								autoComplete="given-name"
-								onChange={(e) => {
-									clearError(e);
-									setFirstName(e.target.value);
-								  }} 
-								className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
-							/>
-						</div>
-						<div>
-							<label className="block lg:text-label-lg">LAST NAME</label>
-							<input 
-								type="text" 
-								name="last-name" 
-								id="last-name" 
-								autoComplete="family-name" 
-								onChange={(e) => {
-									clearError(e);
-									setLastName(e.target.value);
-								  }}
-								className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
-							/>
+						<div role="name" className="flex flex-col md:flex-row md:gap-4 justify-between">
+							<div className="w-full">
+								<label className="block lg:text-label-lg">FIRST NAME</label>
+								<input 
+									type="text" 
+									name="first-name" 
+									id="first-name" 
+									autoComplete="given-name"  
+									onChange={(e) => {
+										clearError(e);
+										setFirstName(e.target.value);
+									}} 
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+								/>
+							</div>
+							<div className="w-full">
+								<label className="block lg:text-label-lg">LAST NAME</label>
+								<input 
+									type="text" 
+									name="last-name" 
+									id="last-name" 
+									autoComplete="family-name" 
+									onChange={(e) => {
+										clearError(e);
+										setLastName(e.target.value);
+									}}
+									className="block w-full rounded-md px-3.5 py-1.5 bg-white/60 border border-gray focus:outline-button"
+								/>
+							</div>
 						</div>
 					</div>
 					<div 

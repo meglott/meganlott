@@ -6,13 +6,13 @@ export default function Projects() {
 		<div 
 		role="projects-page"
         id="projects"
-		className="w-full h-full flex flex-col"
+		className="w-full h-full flex flex-col justify-center items-center"
         >
-			<div role="header" className="h-40 pt-14 bg-heading bg-no-repeat bg-center bg-contain text-center">
-				<p className="text-heading text-white text-stroke">PROJECTS</p>
+			<div role="header" className="h-24 lg:h-40 w-full bg-heading bg-no-repeat bg-center bg-contain flex justify-center items-center">
+				<p className="text-title-sm md:title-md lg:text-heading text-white text-stroke">PROJECTS</p>
 			</div>
-			<div className="flex flex-col flex-1 justify-center">
-				<div role="cards" className="h-max-full w-full grid grid-rows-1 grid-flow-col gap-0 pt-4 justify-items-center">
+			<div className="flex flex-col flex-1 h-fit justify-center">
+				<div role="cards" className="flex flex-row h-max-full w-full gap-0 lg:gap-8 pt-0 lg:pt-4 justify-items-center">
 					<div role="left-arrow" className="flex items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
 							<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
