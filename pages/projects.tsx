@@ -9,7 +9,7 @@ export default function Projects() {
         id="projects"
 		className="w-full h-full flex flex-col justify-between items-center py-4 lg:py-2"
         >
-			<div role="header" className="h-24 md:h-40 xl:h-48 w-full bg-heading bg-no-repeat bg-center bg-cover lg:bg-cover flex justify-center items-center">
+			<div role="header" className="h-24 md:h-40 w-full bg-heading bg-no-repeat bg-center bg-cover lg:bg-contain flex justify-center items-center">
 				<p className="text-title-sm md:text-heading text-white text-stroke-subtitle">PROJECTS</p>
 			</div>
 			<div className="flex flex-col h-fit justify-center">
