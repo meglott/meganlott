@@ -8,11 +8,11 @@ import Projects from "./projects";
 
 export default function HomePage() {
 	return (
-		<div className="relative w-full min-h-screen flex">
+		<div className="relative w-full h-screen flex">
 			<DrawerMenu />
 			<div 
 				id="outermost-div"
-				className="flex flex-col h-screen w-full"
+				className="flex flex-col h-full w-full"
 			>
 				<div className="h-24 sticky top-0 w-full">
 					<HeaderComponent />
