@@ -16,12 +16,12 @@
 
 .text-stroke-subtitle { 
 	text-shadow: 
-        -1px -1px 0 #581C87,
-         0   -1px 0 #581C87,
-         1px -1px 0 #581C87,
-         1px  0   0 #581C87,
-         1px  1px 0 #581C87,
-         0    1px 0 #581C87,
-        -1px  1px 0 #581C87,
-        -1px  0   0 #581C87;
+        -1px -1px 0 #4A148C,
+         0   -1px 0 #4A148C,
+         1px -1px 0 #4A148C,
+         1px  0   0 #4A148C,
+         1px  1px 0 #4A148C,
+         0    1px 0 #4A148C,
+        -1px  1px 0 #4A148C,
+        -1px  0   0 #4A148C;
 }
