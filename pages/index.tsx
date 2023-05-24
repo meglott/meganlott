@@ -22,7 +22,7 @@ export default function HomePage() {
 					className="flex-1 overflow-y-hidden"
 				>
 					<Home />
-					{/* <About /> */}
+					<About />
 					<Projects />
 					<Contact />
 				</div>

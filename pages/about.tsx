@@ -1,22 +1,19 @@
-import Image from "next/image";
+import AboutFile from "../components/about-file";
 
 export default function About() {
 	return (
 		<div 
             role="about-page"
             id="about"
-            className="flex w-full h-full bg-light-green items-center justify-center"
+            className="flex-1 w-full h-full bg-light-green snap-start overflow-y-auto"
         >
-            <div 
-                role="content" 
-                className="grid grid-cols-2 grid-rows-1 h-5/6 w-full divide-light-gray divide-x-4"
-            >
-                    <div className="pr-10 bg-about-background bg-no-repeat bg-center bg-contain">
-                    
-                    </div>
-                    <div className="pl-10">
-                        <p>RIGHT SIDE</p>
-                    </div>
+            <div className="flex flex-row h-full justify-center items-center">
+                <div className="w-1/2">
+                    Left Side 
+                </div>
+                <div className="flex w-1/2 h-full justify-center items-center">
+                    <AboutFile />
+                </div>
             </div>
 		</div>
 	);
