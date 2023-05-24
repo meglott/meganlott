@@ -31,21 +31,21 @@ export default function AboutFile() {
                     className={`flex w-1/3 justify-center items-center bg-white border-2 border-purple-900 ${personalActive ? 'border-b-0' : (educationActive ? 'border-b-teal-600' : 'border-b-sky-800')} rounded-t-lg`}
                     onClick={setPersonalTab}
                 >
-                    <p className="text-purple-900">PERSONAL</p>
+                    <p className="text-purple-900 text-xs md:text-base">PERSONAL</p>
                 </button>
                 <button 
                     role="education-tab" 
-                    className={`flex w-1/3 justify-center items-center bg-white border-2 border-teal-600 ${personalActive ? 'boder-b-purple-900' : (educationActive ? 'border-b-0' : 'border-b-sky-800')} rounded-t-lg`}
+                    className={`flex w-1/3 justify-center items-center bg-white border-2 border-teal-600 ${personalActive ? 'border-b-purple-900' : (educationActive ? 'border-b-0' : 'border-b-sky-800')} rounded-t-lg`}
                     onClick={setEducationTab}
                 >
-                    <p className="text-teal-600">EDUCATION</p>
+                    <p className="text-teal-600 text-xs md:text-base">EDUCATION</p>
                 </button>
                 <button 
                     role="professional-tab"
-                    className={`flex w-1/3 justify-center items-center bg-white border-2 ${personalActive ? 'boder-b-purple-900' : (educationActive ? 'border-b-teal-600' : 'border-b-0')} border-sky-800 rounded-t-lg`}
+                    className={`flex w-1/3 justify-center items-center bg-white border-2 ${personalActive ? 'border-b-purple-900' : (educationActive ? 'border-b-teal-600' : 'border-b-0')} border-sky-800 rounded-t-lg`}
                     onClick={setProfessionalTab}
                 >
-                    <p className="text-sky-800">PROFESSIONAL</p>
+                    <p className="text-sky-800 text-xs md:text-base">PROFESSIONAL</p>
                 </button>
             </div>
             <div 
