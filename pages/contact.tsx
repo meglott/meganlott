@@ -148,7 +148,7 @@ export default function Contact() {
 		<div 
 		role="contact-page"
 		id="contact-page"
-		className="flex-1 w-full h-full bg-light-purple md:bg-splash-screen md:bg-no-repeat md:bg-center md:bg-contain snap-start overflow-y-auto">
+		className="flex w-full h-full bg-light-purple md:bg-splash-screen md:bg-no-repeat md:bg-center md:bg-contain overflow-y-auto">
             <div
 				id="contact-content" 
 				className="flex flex-col w-full h-full items-center justify-center"
