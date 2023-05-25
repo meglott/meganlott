@@ -31,6 +31,12 @@ module.exports = {
         'subtitle-md': ['32px', {lineHeight: '42px', fontWeight: '400'}],
         heading: ['80px', {lineHeight: '56px', fontWeight: '400'}],
         'label-lg': ['20px', {lineHeight: '32px', fontWeight: '400'}],
+      },
+      fontFamily: {
+        'permanent-marker': ['Permanent Marker', 'sans-serif']
+      },
+      dropShadow: {
+        'polaroid': '-5px 5px 5px rgba(0, 0, 0, 0.6)'
       }
     },
   },
