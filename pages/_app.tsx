@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div id='app'>
+    <div id='app' className='h-full'>
         <Component {...pageProps} />
     </div>
   );
