@@ -148,12 +148,12 @@ export default function Contact() {
 		<div 
 		role="contact-page"
 		id="contact-page"
-		className="flex w-full h-full bg-light-purple md:bg-splash-screen md:bg-no-repeat md:bg-center md:bg-contain overflow-y-auto">
+		className="w-full h-full flex flex-col gap-2 justify-between items-center py-4 overflow-y-auto bg-light-purple md:bg-splash-screen md:bg-no-repeat md:bg-center md:bg-contain">
             <div
 				id="contact-content" 
-				className="flex flex-col w-full h-full items-center justify-center"
+				className="flex flex-col w-full items-center justify-center"
 			>
-				<div role="header" className="h-24 md:hidden w-full bg-heading bg-no-repeat bg-center bg-cover flex justify-center items-center">
+				<div role="header" className="h-24 md:hidden w-full bg-heading bg-no-repeat bg-center bg-cover flex flex-shrink-0 justify-center items-center">
 					<p className="text-title-sm md:title-md text-white text-stroke-subtitle">CONTACT ME</p>
 				</div>
 				<div>

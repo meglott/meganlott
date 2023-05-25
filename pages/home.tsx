@@ -1,3 +1,5 @@
+import FooterComponent from "../components/layout/footer";
+
 export default function Home() {
 	return (
 		<div 
@@ -15,7 +17,7 @@ export default function Home() {
 			</div>
 			{/* MOBILE */}
 			<div className="visible md:hidden w-full h-full flex flex-col items-center justify-center gap-5">
-				<div className="w-full h-1/3 bg-splash-screen bg-no-repeat bg-center bg-contain flex items-center justify-center">
+				<div className="w-full h-1/3 bg-splash-screen bg-no-repeat bg-center bg-contain flex flex-shrink-0 items-center justify-center">
 					<p className="text-title-sm text-light-green text-stroke-subtitle">MEGAN LOTT</p>
 				</div>
 				<div className="w-full h-fit px-4 text-purple-900 text-smSubtitle text-center flex items-center justify-center">
