@@ -8,7 +8,7 @@ import Projects from "./projects";
 
 export default function HomePage() {
 	return (
-		<div className="absolute w-full h-screen flex">
+		<div className="absolute w-full h-full flex">
 			<DrawerMenu />
 			<div 
 				id="outermost-div"
