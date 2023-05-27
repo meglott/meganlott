@@ -1,18 +1,24 @@
 import Image from "next/image"
+import Link from "next/link"
 
 type ProjectCardProps = {
     imageSrc: string,
     imageAlt: string,
+    link: string,
     title: string,
     subtitle: string,
     description: string,
     attributes: Array<string>
 }
 
-function ProjectCard({imageSrc, imageAlt, title, subtitle, description, attributes}: ProjectCardProps) {    
+function ProjectCard({imageSrc, imageAlt, link, title, subtitle, description, attributes}: ProjectCardProps) {    
     return (  
         <div role="project-card" className="max-w-md w-full rounded-xl overflow-hidden shadow-lg">
-            <Image height={250} width={500} src={imageSrc} alt={imageAlt} />
+            <Link href={link}  rel="noopener noreferrer" target="_blank">
+                <div className={`flex ${title === "HomeTeam" ? 'mx-8' : 'm-2'} h-64 w-fit`}>
+                    <Image height={250} width={500} src={imageSrc} alt={imageAlt} />
+                </div>
+            </Link>
             <div className="px-6 py-2 md:py-4">
                 <div className="font-bold text-xl mb-2">
                     {title}

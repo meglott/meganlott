@@ -1,8 +1,48 @@
-import Image from "next/image";
 import ProjectCard from "../components/project-card";
 import Link from "next/link";
 
 export default function Projects() {
+
+	const projectList = [
+		{
+			imageSrc: '/hometeam-logo.svg',
+			imageAlt: 'HomeTeam by ReflexAI',
+			link: 'https:/hometeam.reflexai.com',
+			title: 'HomeTeam',
+			subtitle: 'Google.org Fellowship - Technical Lead',
+			description: 'A responsive web application to offer education and resources to military veterans looking to support their colleagues experiencing mental health crises.',
+			attributes: [
+				'TypeScript',
+				'React',
+				'Next.js',
+				'Docker',
+				'MongoDB',
+				'Tailwind CSS',
+				'Auth0',
+				'Swagger',
+				'Terraform',
+				'Jest',
+				'Google Cloud Platform'
+			]
+		}, {
+			imageSrc: '/homepage.png',
+			imageAlt: 'Homepage of meganlott.com', 
+			link: 'https://meganlott.com',
+			title: 'Megan Lott LLC', 
+			subtitle: 'Design, Develop, and Deploy',
+			description: 'This is it! This portfolio site was designed and built by yours truly.',
+			attributes: [
+				"TypeScript", 
+				"React",
+				"Next.js", 
+				"Tailwind CSS",
+				"AWS Amplify",
+				"Route 53",
+				"SendGrid"
+			]
+		}
+	];
+
 	return (
 		<div 
 		role="projects-page"
@@ -19,42 +59,17 @@ export default function Projects() {
 							<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
 						</svg>
 					</div>
+					{ projectList.map((project, index) => 
 					<ProjectCard 
-						imageSrc="/homepage.png"
-						imageAlt="Homepage of meganlott.com" 
-						title="Megan Lott LLC" 
-						subtitle="Design, Develop, and Deploy"
-						description="This is it! This portfolio site was designed and built by yours truly."
-						attributes={[
-							"TypeScript", 
-							"React",
-							"Next.js", 
-							"Tailwind CSS",
-							"AWS Amplify",
-							"Route 53",
-							"SendGrid"
-						]}
-					/>
-					{/* <ProjectCard 
-						imageSrc=""
-						imageAlt="HomeTeam by ReflexAI"
-						title="HomeTeam" 
-						description="A responsive web application to offer education and resources to military veterans looking to support their colleagues experiencing mental health crises."
-						attributes={[
-							"TypeScript", 
-							"React", 
-							"Next.js",
-							"Docker", 
-							"MongoDB",
-							"TailwindCSS", 
-							"Auth0", 
-							"Swagger", 
-							"Terraform",  
-							"Jest",
-							"Google Cloud Platform",
-							"Contentful"
-						]}
-					/> */}
+						key={index}
+						imageSrc={project.imageSrc!}
+						imageAlt={project.imageAlt!}
+						link={project.link!}
+						title={project.title!}
+						subtitle={project.subtitle!}
+						description={project.description!}
+						attributes={project.attributes!}
+					/>)}
 					<div role="right-arrow" className="flex items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 stroke-light-gray">
 							<path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
