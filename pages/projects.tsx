@@ -1,47 +1,61 @@
 import ProjectCard from "../components/project-card";
 import Link from "next/link";
+import { useMediaQuery } from "@mui/material";
+import { useEffect, useState } from "react";
+
+const projectList = [
+	{
+		imageSrc: '/hometeam-logo.svg',
+		imageAlt: 'HomeTeam by ReflexAI',
+		link: 'https:/hometeam.reflexai.com',
+		title: 'HomeTeam',
+		subtitle: 'Google.org Fellowship - Technical Lead',
+		description: 'A responsive web application to offer education and resources to military veterans looking to support their colleagues experiencing mental health crises.',
+		attributes: [
+			'TypeScript',
+			'React',
+			'Next.js',
+			'Docker',
+			'MongoDB',
+			'Tailwind CSS',
+			'Auth0',
+			'Swagger',
+			'Terraform',
+			'Jest',
+			'Google Cloud Platform'
+		]
+	}, {
+		imageSrc: '/homepage.png',
+		imageAlt: 'Homepage of meganlott.com', 
+		link: 'https://meganlott.com',
+		title: 'Megan Lott LLC', 
+		subtitle: 'Design, Develop, and Deploy',
+		description: 'This is it! This portfolio site was designed and built by yours truly.',
+		attributes: [
+			"TypeScript", 
+			"React",
+			"Next.js", 
+			"Tailwind CSS",
+			"AWS Amplify",
+			"Route 53",
+			"SendGrid"
+		]
+	}
+];
 
 export default function Projects() {
 
-	const projectList = [
-		{
-			imageSrc: '/hometeam-logo.svg',
-			imageAlt: 'HomeTeam by ReflexAI',
-			link: 'https:/hometeam.reflexai.com',
-			title: 'HomeTeam',
-			subtitle: 'Google.org Fellowship - Technical Lead',
-			description: 'A responsive web application to offer education and resources to military veterans looking to support their colleagues experiencing mental health crises.',
-			attributes: [
-				'TypeScript',
-				'React',
-				'Next.js',
-				'Docker',
-				'MongoDB',
-				'Tailwind CSS',
-				'Auth0',
-				'Swagger',
-				'Terraform',
-				'Jest',
-				'Google Cloud Platform'
-			]
-		}, {
-			imageSrc: '/homepage.png',
-			imageAlt: 'Homepage of meganlott.com', 
-			link: 'https://meganlott.com',
-			title: 'Megan Lott LLC', 
-			subtitle: 'Design, Develop, and Deploy',
-			description: 'This is it! This portfolio site was designed and built by yours truly.',
-			attributes: [
-				"TypeScript", 
-				"React",
-				"Next.js", 
-				"Tailwind CSS",
-				"AWS Amplify",
-				"Route 53",
-				"SendGrid"
-			]
+	const [viewableProjects, setViewableProjects] = useState(projectList);
+
+	const smallScreen = useMediaQuery("(max-width:1023px)");
+	console.log(smallScreen);
+	useEffect(() => {
+		if (smallScreen) {
+			setViewableProjects([projectList[0]])
+		} else {
+			setViewableProjects(projectList);
 		}
-	];
+	}, [smallScreen]);
 
 	return (
 		<div 
@@ -59,7 +73,7 @@ export default function Projects() {
 							<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
 						</svg>
 					</div>
-					{ projectList.map((project, index) => 
+					{ viewableProjects.map((project, index) => 
 					<ProjectCard 
 						key={index}
 						imageSrc={project.imageSrc!}
