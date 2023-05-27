@@ -25,6 +25,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
         </div>`,
     });
   } catch (error: any) {
+    console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 
