@@ -57,7 +57,7 @@ export default function AboutFile() {
                     <div className={`${personalActive ? 'flex' : 'hidden'} flex-col text-base`}>
                         <p>
                             
-                            Welcome! My name is <b className="text-purple-900">Megan Lott</b>. I'm a <b className="text-purple-900">full-stack software engineer</b> with over 8 years of experience at top Tech companies.
+                            Welcome! My name is <b className="text-purple-900">Megan Lott</b>. I&#39;m a <b className="text-purple-900">full-stack software engineer</b> with over 8 years of experience at top Tech companies.
                             I have a passion for <i>designing</i>, <i>developing</i>, and <i>deploying</i> products that put the <b className="text-purple-900">user first</b>.
                         </p>
                         <br />
