@@ -38,7 +38,7 @@ const projectList = [
 			"Tailwind CSS",
 			"AWS Amplify",
 			"Route 53",
-			"SendGrid"
+			"AWS SES"
 		]
 	}
 ];
@@ -48,7 +48,6 @@ export default function Projects() {
 	const [viewableProjects, setViewableProjects] = useState(projectList);
 
 	const smallScreen = useMediaQuery("(max-width:1023px)");
-	console.log(smallScreen);
 	useEffect(() => {
 		if (smallScreen) {
 			setViewableProjects([projectList[0]])

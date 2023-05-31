@@ -117,7 +117,7 @@ export default function Contact() {
 		let isValidForm = formValidation();
 	
 		if (isValidForm) {
-		  const res = await fetch("/api/sendgrid", {
+		  const res = await fetch("/api/sendemail", {
 			body: JSON.stringify({
 			  email: email,
 			  firstname: firstName,
