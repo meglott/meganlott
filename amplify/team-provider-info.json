@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-meganlott-dev-125751-authRole",
+      "UnauthRoleArn": "arn:aws:iam::795501291893:role/amplify-meganlott-dev-125751-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::795501291893:role/amplify-meganlott-dev-125751-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-meganlott-dev-125751-deployment",
+      "UnauthRoleName": "amplify-meganlott-dev-125751-unauthRole",
+      "StackName": "amplify-meganlott-dev-125751",
+      "StackId": "arn:aws:cloudformation:us-east-2:795501291893:stack/amplify-meganlott-dev-125751/12f4e600-200c-11ee-966b-06633081da5b",
+      "AmplifyAppId": "d3op39lnnagbl5"
+    },
+    "categories": {
+      "function": {
+        "sendemail": {
+          "sesEmail": "info@meganlott.com",
+          "deploymentBucketName": "amplify-meganlott-dev-125751-deployment",
+          "s3Key": "amplify-builds/sendemail-796a7079532b63464931-build.zip"
+        }
+      },
+      "api": {
+        "meganlott": {}
+      }
+    }
+  }
+}
